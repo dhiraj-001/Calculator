@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="calculator.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="bg-image">
+    <div class="calculator">
+      <input type="text" class="input" id="readonly" readonly />
+      <div class="elements">
+        
+        <button
+          class="keys"
+          onclick="currentdisplay=currentdisplay+'1';document.querySelector('#readonly').value = currentdisplay;"
+        >
+          1</button
+        ><button
+          class="keys"
+          onclick="currentdisplay=currentdisplay+'2';document.querySelector('#readonly').value = currentdisplay;"
+        >
+          2
+        </button><button
+          class="keys"
+          onclick="currentdisplay=currentdisplay+'3';document.querySelector('#readonly').value = currentdisplay;"
+        >
+          3
+        </button>
+        <button
+          class="keys"
+          onclick="currentdisplay=currentdisplay+'+';document.querySelector('#readonly').value = currentdisplay;"
+        >
+          +</button
+        >
+        <button
+          class="keys"
+          onclick="currentdisplay=currentdisplay+'4';document.querySelector('#readonly').value = currentdisplay;"
+        >
+          4
+        </button>
+        <button
+          class="keys"
+          onclick="currentdisplay=currentdisplay+'5';document.querySelector('#readonly').value = currentdisplay;"
+        >
+          5
+        </button><button
+          class="keys"
+          onclick="currentdisplay=currentdisplay+'6';document.querySelector('#readonly').value = currentdisplay;"
+        >
+          6
+        </button>
+        <button
+          class="keys"
+          onclick="currentdisplay=currentdisplay+'-';document.querySelector('#readonly').value = currentdisplay;"
+        >
+          -</button
+        >
+        <button
+          class="keys"
+          onclick="currentdisplay=currentdisplay+'7';document.querySelector('#readonly').value = currentdisplay;"
+        >
+          7</button
+        ><button
+          class="keys"
+          onclick="currentdisplay=currentdisplay+'8';document.querySelector('#readonly').value = currentdisplay;"
+        >
+          8
+        </button> <button
+          class="keys"
+          onclick="currentdisplay=currentdisplay+'9';document.querySelector('#readonly').value = currentdisplay;"
+        >
+          9</button
+        >
+        <button class="keys" onclick="currentdisplay=currentdisplay+'*';document.querySelector('#readonly').value = currentdisplay;">*</button>
+       <button
+          class="keys"
+          onclick="currentdisplay=currentdisplay+'0';document.querySelector('#readonly').value = currentdisplay;"
+        >
+          0
+        </button>
+        <button
+          class="keys"
+          onclick="currentdisplay=currentdisplay+'.';document.querySelector('#readonly').value = currentdisplay;"
+        >
+          .
+        </button>
+         <button
+          class="keys"
+          onclick="let result= eval(currentdisplay); currentdisplay=result;
+          ;document.querySelector('#readonly').value = currentdisplay;"
+        >
+          =
+        </button>
+        <button
+          class="keys"
+          onclick="currentdisplay=currentdisplay+'/';document.querySelector('#readonly').value = currentdisplay;"
+        >
+          /</button
+        >
+       
+        <button class="keys" onclick="currentdisplay='';document.querySelector('#readonly').value = currentdisplay;"><b>C</b></button>
+        <button class="keys" onclick="display.innerText = display.innerText.slice(0, -1)"><b>←</b></button>
+        
+
+       
+      </div>
+    </div>
+  </div>
+    <script>
+      let currentdisplay = "";
+      document.querySelector("#readonly").value = currentdisplay;
+    </script>
+  </body>
+</html>
